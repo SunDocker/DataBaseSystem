@@ -1,5 +1,9 @@
 # 初步认识数据库系统
 
+本讲概述：
+
+<img src="README.assets/image-20221031181327081.png" alt="image-20221031181327081" style="zoom:50%;" />
+
 ## 1 为什么要学习数据库系统
 
 - Everything Over DB
