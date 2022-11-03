@@ -333,9 +333,101 @@
 >
 >   <img src="README.assets/image-20221103154502565.png" alt="image-20221103154502565" style="zoom:67%;" />
 >
->   注意如何正确表述汉语的查询要求
+>   注意如何正确表述汉语的查询要求（汉语的这部分也写进总结博客里吧）
+
+#### 2.3 广义笛卡尔积
+
+<img src="README.assets/image-20221103160918457.png" alt="image-20221103160918457" style="zoom:67%;" />
+
+- 交换律
+
+  <img src="README.assets/image-20221103161423968.png" alt="image-20221103161423968" style="zoom:67%;" />
+
+- 度数：相加
+
+  <img src="README.assets/image-20221103161436366.png" alt="image-20221103161436366" style="zoom:60%;" />
+
+- 基数：相乘
+
+  <img src="README.assets/image-20221103161452591.png" alt="image-20221103161452591" style="zoom:67%;" />
+
+- 一个检索涉及到多个表时，需要将这些表串接或拼接起来，然后才能检索，这时，就要使用广义笛卡尔积运算
+
+- 
+
+> 抽象举例：
+>
+> <img src="README.assets/image-20221103161055172.png" alt="image-20221103161055172" style="zoom:50%;" />
+>
+> <img src="README.assets/image-20221103161250731.png" alt="image-20221103161250731" style="zoom:50%;" />
+>
+> 语义举例：
+>
+> <img src="README.assets/image-20221103161331298.png" alt="image-20221103161331298" style="zoom:50%;" />
+
+#### 2.4 “选择”操作
+
+<img src="README.assets/image-20221103161636373.png" alt="image-20221103161636373" style="zoom:67%;" />
+
+<img src="README.assets/image-20221103161800835.png" alt="image-20221103161800835" style="zoom:67%;" />
+
+- 选择操作从给定的关系中选出满足条件的行
+- 组成条件的三要素：分量、逻辑运算符、比较表达式
+- 条件的书写很重要，尤其是当不同运算符在一起时，要注意运算符的优先次序，优先次序自高至低为${ 括弧；\theta ；\neg ；\and ；\or }$
+
+> 抽象举例：
+>
+> <img src="README.assets/image-20221103162006401.png" alt="image-20221103162006401" style="zoom:67%;" />
+>
+> 语义举例：
+>
+> <img src="README.assets/image-20221103162247819.png" alt="image-20221103162247819" style="zoom:60%;" />
+>
+> - 这里加**引号**表示**字符串**
+>
+> > 战神教我们的书写顺序：先写`(R)`，代表要操作`R`这个关系，再写$\sigma$，代表要进行选择操作，然后再写`con(t)`，代表选择的条件
+>
+> <img src="README.assets/image-20221103162459172.png" alt="image-20221103162459172" style="zoom:50%;" />
+>
+> <img src="README.assets/image-20221103162513401.png" alt="image-20221103162513401" style="zoom:60%;" />
+
+#### 2.5 “投影”操作
+
+<img src="README.assets/image-20221103162757211.png" alt="image-20221103162757211" style="zoom:67%;" />
+
+- 用户可以根据需要通过投影、选择操作查询他所关心的数据信息。
+
+<img src="README.assets/image-20221103163026580.png" alt="image-20221103163026580" style="zoom:67%;" />
+
+- 对于**关系**来说，如果投影后有**重复元组**，应该去掉
+
+<img src="README.assets/image-20221103163043375.png" alt="image-20221103163043375" style="zoom:67%;" />
+
+> 抽象举例：
+>
+> <img src="README.assets/image-20221103163132301.png" alt="image-20221103163132301" style="zoom:50%;" />
+>
+> 语义举例：
+>
+> <img src="README.assets/image-20221103163305527.png" alt="image-20221103163305527" style="zoom:50%;" />
+>
+> 投影与选择操作一起使用的语义举例：
+>
+> <img src="README.assets/image-20221103163449508.png" alt="image-20221103163449508" style="zoom:67%;" />
+
+#### 2.6 小结/书写思路
+
+<img src="README.assets/image-20221103170155976.png" alt="image-20221103170155976" style="zoom:67%;" />
+
+操作含义
+
+用户语义
 
 
+
+
+
+### 3 关系代数的扩展操作
 
 
 
