@@ -630,15 +630,120 @@
 
 ### 5 复杂扩展操作
 
+#### 5.1 “除”操作
 
+概述：
 
+<img src="README.assets/image-20221108190441310.png" alt="image-20221108190441310" style="zoom:67%;" />
 
+---
 
+前提运算：
 
+<img src="README.assets/image-20221108190524513.png" alt="image-20221108190524513" style="zoom:67%;" />
 
+---
 
+定义：
 
+- 属性的构成
 
+  <img src="README.assets/image-20221108190615192.png" alt="image-20221108190615192" style="zoom:67%;" />
+
+- 元组的构成
+
+  <img src="README.assets/image-20221108190742890.png" alt="image-20221108190742890" style="zoom:67%;" />
+
+---
+
+数学描述：
+
+<img src="README.assets/image-20221108190908393.png" alt="image-20221108190908393" style="zoom:67%;" />
+
+> 第一条数学描述就是按照上面的**构成**说的；
+>
+> 第二条数学描述要通过例子理解
+
+---
+
+抽象举例：
+
+<img src="README.assets/image-20221108191321664.png" alt="image-20221108191321664" style="zoom:67%;" />
+
+抽象举例：用基本操作表示除法
+
+<img src="README.assets/image-20221108192130403.png" alt="image-20221108192130403" style="zoom:67%;" />
+
+- 先找出组合完之后不在R中的，再做差，剩下的就是在R中的
+
+> 1. 把R对应的属性扔掉，剩下的去重（投影）
+> 2. 因为要找的就是剩下的当中，和S组合后是R中记录的东西，所以先把剩下的这个东西直接和S乘积一下，得出一大堆
+> 3. 一大堆中有些在R中有些不在R中，差R，就得到了不在R中的，也就是说这些组合是不行的，组完了不在R中
+> 4. 把上一步差完的东西再删除对应的属性，就是这些东西不能和S组合，所以最后把它们差去就可以
+
+语义举例：主要应用在带有“全部”、“所有”字样的语义中
+
+<img src="README.assets/image-20221108192347019.png" alt="image-20221108192347019" style="zoom:80%;" />
+
+- **“全部”主要是全在了S上**，因为得到“商”，和S所有的记录组合“全部”都是R中的
+
+语义举例3：体会“中间表”的作用
+
+<img src="README.assets/image-20221108192730139.png" alt="image-20221108192730139" style="zoom:67%;" />
+
+> <img src="README.assets/image-20221108192819103.png" alt="image-20221108192819103" style="zoom:67%;" />
+>
+> 在这里是一样的，因为S#和C#是主键，如果不是主键呢？？？
+
+#### 5.2 “外连接”操作
+
+概述：外连接的提出
+
+<img src="README.assets/image-20221108195725168.png" alt="image-20221108195725168" style="zoom:67%;" />
+
+- 有的老师没讲课我也想知道，也要体现在结果里
+
+---
+
+定义：
+
+<img src="README.assets/image-20221108195851363.png" alt="image-20221108195851363" style="zoom:67%;" />
+
+- 连接时的依据还是**同名属性的值相等**
+
+举例：
+
+<img src="README.assets/image-20221108195937956.png" alt="image-20221108195937956" style="zoom:67%;" />
+
+---
+
+外连接的分类：
+
+<img src="README.assets/image-20221108200036170.png" alt="image-20221108200036170" style="zoom:67%;" />
+
+举例：
+
+<img src="README.assets/image-20221108200324066.png" alt="image-20221108200324066" style="zoom:67%;" />
+
+<img src="README.assets/image-20221108200332478.png" alt="image-20221108200332478" style="zoom:67%;" />
+
+<img src="README.assets/image-20221108200410546.png" alt="image-20221108200410546" style="zoom:67%;" />
+
+<img src="README.assets/image-20221108200437759.png" alt="image-20221108200437759" style="zoom:67%;" />
+
+<img src="README.assets/image-20221108200538517.png" alt="image-20221108200538517" style="zoom:67%;" />
+
+### 6 总结
+
+<img src="README.assets/image-20221108200632664.png" alt="image-20221108200632664" style="zoom:67%;" />
+
+<img src="README.assets/image-20221108200742012.png" alt="image-20221108200742012" style="zoom:67%;" />
+
+回顾计算机系统的设计思想之一：基本运算的组合
+
+<img src="README.assets/image-20221108200854790.png" alt="image-20221108200854790" style="zoom:67%;" />
+
+- 有关系代数操作，数据库管理系统的实现就会变容易了
 
 
 
