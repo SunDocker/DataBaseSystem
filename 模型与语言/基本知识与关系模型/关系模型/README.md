@@ -423,11 +423,218 @@
 
 用户语义
 
-
-
-
-
 ### 3 关系代数的扩展操作
+
+> 用基本操作组合实现的操作
+
+#### 3.1 “交”操作
+
+<img src="README.assets/image-20221108155529746.png" alt="image-20221108155529746" style="zoom:67%;" />
+
+性质：
+
+- <img src="README.assets/image-20221108155556989.png" alt="image-20221108155556989" style="zoom:80%;" />
+
+> <img src="README.assets/image-20221108155708906.png" alt="image-20221108155708906" style="zoom:80%;" />
+
+> 抽象举例：
+>
+> <img src="README.assets/image-20221108160250994.png" alt="image-20221108160250994" style="zoom:67%;" />
+>
+> 语义举例：
+>
+> <img src="README.assets/image-20221108160358069.png" alt="image-20221108160358069" style="zoom:67%;" />
+>
+> <img src="README.assets/image-20221108160426021.png" alt="image-20221108160426021" style="zoom:67%;" />
+>
+> <img src="README.assets/image-20221108160431781.png" alt="image-20221108160431781" style="zoom:67%;" />
+
+#### 3.2 “$\theta-$连接操作”
+
+<img src="README.assets/image-20221108160547077.png" alt="image-20221108160547077" style="zoom:67%;" />
+
+- 现实中有很多**对多个关系的操作**
+- 也有许多需要**关系与自身连接**的操作
+
+> <img src="README.assets/image-20221108160610697.png" alt="image-20221108160610697" style="zoom:67%;" />
+
+数学定义：
+
+<img src="README.assets/image-20221108161644119.png" alt="image-20221108161644119" style="zoom:67%;" />
+
+> <img src="README.assets/image-20221108161652019.png" alt="image-20221108161652019" style="zoom:80%;" />
+
+:star:DBMS的实现：
+
+<img src="README.assets/image-20221108163141764.png" alt="image-20221108163141764" style="zoom:67%;" />
+
+- 也就是说，从实现的角度来讲，**$\theta-$连接**操作快于**笛卡尔积再选择**
+
+  > 所以，能连接就连接，会比较快，能**优化**
+
+> 抽象举例：
+>
+> <img src="README.assets/image-20221108161828478.png" alt="image-20221108161828478" style="zoom:67%;" />
+>
+> 语义举例：
+>
+> <img src="README.assets/image-20221108162049395.png" alt="image-20221108162049395" style="zoom:67%;" />
+>
+> <img src="README.assets/image-20221108162224307.png" alt="image-20221108162224307" style="zoom:67%;" />
+>
+> > 注意，这只理论操作的过程，实际实现时不需要这样笛卡尔积，能直接得到结果
+>
+> :star:关系自连接与**更名**：:star:
+>
+> > 这个例子很重要，体会**<u>连接、选择、投影</u>**的结合作用
+>
+> <img src="README.assets/image-20221108162601517.png" alt="image-20221108162601517" style="zoom:67%;" />
+>
+> <img src="README.assets/image-20221108162609414.png" alt="image-20221108162609414" style="zoom:67%;" />
+>
+> > 有的教学中会将**更名**也作为**基本操作**
+
+#### 3.3 “等值-连接”操作
+
+> 一种特殊的$\theta-$连接
+
+<img src="README.assets/image-20221108163317102.png" alt="image-20221108163317102" style="zoom:67%;" />
+
+> <img src="README.assets/image-20221108163326584.png" alt="image-20221108163326584" style="zoom:60%;" />
+>
+> 注意这里说的第二点，就是**效率问题**
+
+> 抽象举例：
+>
+> <img src="README.assets/image-20221108163516527.png" alt="image-20221108163516527" style="zoom:60%;" />
+>
+> 语义举例：
+>
+> <img src="README.assets/image-20221108163628501.png" alt="image-20221108163628501" style="zoom:67%;" />
+>
+> <img src="README.assets/image-20221108163644829.png" alt="image-20221108163644829" style="zoom:67%;" />
+>
+> 注意，这只理论操作的过程，实际实现时不需要这样笛卡尔积，能直接得到结果
+
+#### 3.4 “自然连接”操作
+
+> 普遍使用的一种$\theta-$连接
+
+<img src="README.assets/image-20221108163841853.png" alt="image-20221108163841853" style="zoom:67%;" />
+
+> 就是要有**属性名相同的属性**，可以有多个。然后结果中还会自动去掉同样的属性
+
+<img src="README.assets/image-20221108164045564.png" alt="image-20221108164045564" style="zoom:67%;" />
+
+> 抽象举例：
+>
+> <img src="README.assets/image-20221108164151941.png" alt="image-20221108164151941" style="zoom:67%;" />
+>
+> 语义举例：
+>
+> <img src="README.assets/image-20221108164516851.png" alt="image-20221108164516851" style="zoom:60%;" />
+>
+> > 理论步骤：
+> >
+> > <img src="README.assets/image-20221108164538421.png" alt="image-20221108164538421" style="zoom:60%;" />
+> >
+> > <img src="README.assets/image-20221108164558030.png" alt="image-20221108164558030" style="zoom:60%;" />
+>
+> <img src="README.assets/image-20221108164627374.png" alt="image-20221108164627374" style="zoom:67%;" />
+
+#### 3.5 小结/书写思路
+
+<img src="README.assets/image-20221108164732028.png" alt="image-20221108164732028" style="zoom:67%;" />
+
+- **连接操作**是数据库的重要特点，效率高
+
+### 4 组合与应用训练
+
+#### 4.1 集合操作思维训练
+
+1. 涉及几个表
+
+   > 涉及几个表本质是看需要**哪些列**，同时还要看语义情景下**表之间的关系**，无关的不必要的表不算在内
+
+2. 要求啥条件
+
+3. 关注哪些列
+
+---
+
+举例1：
+
+<img src="README.assets/image-20221108165032243.png" alt="image-20221108165032243" style="zoom:60%;" />
+
+> 由里向外书写
+
+---
+
+举例2：连接条件
+
+<img src="README.assets/image-20221108165524877.png" alt="image-20221108165524877" style="zoom:60%;" />
+
+#### 4.2 语法和语义问题
+
+举例：正确的
+
+<img src="README.assets/image-20221108165653550.png" alt="image-20221108165653550" style="zoom:80%;" />
+
+---
+
+举例：语义“且”错误的
+
+<img src="README.assets/image-20221108165734692.png" alt="image-20221108165734692" style="zoom:67%;" />
+
+> 这个用交运算实现也可以
+>
+> <img src="README.assets/image-20221108170136163.png" alt="image-20221108170136163" style="zoom:67%;" />
+
+---
+
+举例：“语义且”改正的
+
+<img src="README.assets/image-20221108165854642.png" alt="image-20221108165854642" style="zoom:67%;" />
+
+---
+
+举例：错误使用“自然连接”
+
+<img src="README.assets/image-20221108165917278.png" alt="image-20221108165917278" style="zoom:67%;" />
+
+> 自然连接会**将值相等的属性连接完后直接合并成一个**，自己自然连接自己得到的还是自己
+
+---
+
+举例：语义“不相等”，错误的
+
+<img src="README.assets/image-20221108170329316.png" alt="image-20221108170329316" style="zoom:67%;" />
+
+---
+
+举例：语义“不相等”，不满足**并相容性**，错误的
+
+<img src="README.assets/image-20221108170412187.png" alt="image-20221108170412187" style="zoom:67%;" />
+
+---
+
+举例：语义“不相等”，正确的
+
+<img src="README.assets/image-20221108170601522.png" alt="image-20221108170601522" style="zoom:80%;" />
+
+> 解决方法：先投影好再差
+
+#### 4.3 基本思路
+
+<img src="README.assets/image-20221108170738368.png" alt="image-20221108170738368" style="zoom:80%;" />
+
+### 5 复杂扩展操作
+
+
+
+
+
+
 
 
 
