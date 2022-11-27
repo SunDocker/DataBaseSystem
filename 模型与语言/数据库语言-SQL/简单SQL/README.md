@@ -1,4 +1,4 @@
-# 交互式SQL
+# 简单SQL
 
 ## SQL概述
 
@@ -279,7 +279,46 @@ SELECT-FROM-WHERE \* LIKE \*
 >
 >    <img src="README.assets/image-20221110154345018.png" alt="image-20221110154345018" style="zoom:50%;" />
 
+## SQL修正与撤销数据库
 
+### 1 SQL修改与删除表
+
+<img src="README.assets/image-20221115160326475.png" alt="image-20221115160326475" style="zoom:60%;" />
+
+-   之前已经讲了数据库的建立，但数据库建立后还可能修正，修正数据库主要就是在修正数据表
+-   更具体的会在后面介绍
+
+>   举例：
+>
+>   <img src="README.assets/image-20221115160446654.png" alt="image-20221115160446654" style="zoom:50%;" /> 
+
+---
+
+<img src="README.assets/image-20221115160630548.png" alt="image-20221115160630548" style="zoom:80%;" />
+
+-   <img src="README.assets/image-20221115160639854.png" alt="image-20221115160639854" style="zoom:50%;" /> 
+
+>   举例：
+>
+>   <img src="README.assets/image-20221115160653965.png" alt="image-20221115160653965" style="zoom:50%;" /> 
+
+### 2 SQL删除数据库
+
+<img src="README.assets/image-20221115160723955.png" alt="image-20221115160723955" style="zoom:67%;" />
+
+>   举例：
+>
+>   <img src="README.assets/image-20221115160733907.png" alt="image-20221115160733907" style="zoom:67%;" />
+
+### 3 SQL指定与关闭数据库
+
+<img src="README.assets/image-20221115160945103.png" alt="image-20221115160945103" style="zoom:67%;" />
+
+## 总结
+
+<img src="README.assets/image-20221115161029598.png" alt="image-20221115161029598" style="zoom:60%;" />
+
+-   `Create Table`可以定义关系模式、完整性约束，还可以定义物理存储，但这里没讲定义物理存储
 
 
 
