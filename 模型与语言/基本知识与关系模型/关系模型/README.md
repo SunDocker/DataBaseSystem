@@ -158,7 +158,7 @@
 >
 >   <img src="README.assets/image-20221103145910477.png" alt="image-20221103145910477" style="zoom:50%;" />
 >
->   让不符合的转换为符号的，加记录、加列
+>   让不符合的转换为符合的，加记录、加列
 
 #### 2.3 重要概念
 
@@ -166,7 +166,7 @@
 
 <img src="README.assets/image-20221103150317224.png" alt="image-20221103150317224" style="zoom:67%;" />
 
--   注意其**极小性**
+-    注意其**极小性**
 
 >   <img src="README.assets/image-20221103150325758.png" alt="image-20221103150325758" style="zoom:67%;" />
 >
@@ -218,7 +218,7 @@
 
 >   <img src="README.assets/image-20221103151615724.png" alt="image-20221103151615724" style="zoom:67%;" />
 
-空值的概念：
+空值的 概念：
 
 <img src="README.assets/image-20221103151706410.png" alt="image-20221103151706410" style="zoom:67%;" />
 
