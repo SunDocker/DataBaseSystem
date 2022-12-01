@@ -153,7 +153,8 @@
 
 -   <img src="README.assets/image-20221115194034116.png" alt="image-20221115194034116" style="zoom:67%;" /> 
 -   <img src="README.assets/image-20221115194118398.png" alt="image-20221115194118398" style="zoom:67%;" /> 
-    -   所有、全部$\Lrarr$不存在没有
+    -   所有、全部$\Lrarr$**==不存在没有==**
+-   ==**否定之否定**==
 
 >   举例：相关子查询
 >
@@ -168,23 +169,25 @@
 >   举例：”所有“=”不存在没“
 >
 >   <img src="README.assets/image-20221115194641604.png" alt="image-20221115194641604" style="zoom:67%;" />
->
->   :star:子查询的思路
->
->   1.   确定最主要的投影、关系、选择条件
->
->        -   投影（`select`）：学生姓名
->        -   关系（`from`）：Student
->        -   选择条件（`where`）：学过001号教师的所有课程
->   2.   选择条件中有“所有”，则逆向思维，使用`not exists`，变成“不存在没学过的课”，则在`not exists`内部，只需要查找这个学生没学过的001号教师的课
->        -   投影：保留整条**课程记录**即可，投影不是重点，但要注意查找的主体是**课程**
->        -   关系：Course
->        -   选择条件：首先要是001号老师教的课（`C.T#=001`），并且外层的学生没学过001号教师的这个课
->   3.   选择条件中的“没学过这个课”，也就是对应的记录不存在，就是查出来是空，所以再用一次`not exists`，只需要查询这个学生学过的001号教师的课
->        -   投影：保留整条**课程记录**即可，投影不是重点，但要注意查找的主体是**课程**
->        -   关系：SC
->        -   选择条件：是外层学生的且是001号老师教的（`Student.S#=SC.S# and Course.C#=SC.C#`）
->
+
+### 2 子查询的思路
+
+   1.   确定最主要的投影、关系、选择条件
+
+        -   投影（`select`）：学生姓名
+        
+            >    -   关系（`from`）：Student
+            >       -   选择条件（`where`）：学过001号教师的所有课程
+
+2.   选择条件中有“所有”，则逆向思维，使用`not exists`，变成“不存在没学过的课”，则在`not exists`内部，只需要查找这个学生没学过的001号教师的课
+        -   投影：保留整条**课程记录**即可，投影不是重点，但要注意查找的主体是**课程**
+        -   关系：Course
+        -   选择条件：首先要是001号老师教的课（`C.T#=001`），并且外层的学生没学过001号教师的这个课
+   3.   选择条件中的“没学过这个课”，也就是对应的记录不存在，就是查出来是空，所以再用一次`not exists`，只需要查询这个学生学过的001号教师的课
+        -   投影：保留整条**课程记录**即可，投影不是重点，但要注意查找的主体是**课程**
+        -   关系：SC
+        -   选择条件：是外层学生的且是001号老师教的（`Student.S#=SC.S# and Course.C#=SC.C#`）
+   
 >   举例：”没有任何“
 >
 >   <img src="README.assets/image-20221115195124485.png" alt="image-20221115195124485" style="zoom:67%;" />
@@ -197,3 +200,253 @@
 >   <img src="README.assets/image-20221115200032610.png" alt="image-20221115200032610" style="zoom:67%;" />
 >
 >   -   和上上个例子相同的思路
+>
+>   举例：“不存在有一种xxx没xxx”
+>
+>   <img src="README.assets/image-20221201084209018.png" alt="image-20221201084209018" style="zoom:50%;" />
+
+### 3 用关系代数表达
+
+除法：
+
+<img src="README.assets/image-20221201083752048.png" alt="image-20221201083752048" style="zoom:50%;" />
+
+## 结果计算与聚集计算
+
+### 1 结果计算
+
+<img src="README.assets/image-20221201084554758.png" alt="image-20221201084554758" style="zoom:50%;" />
+
+>   举例：
+>
+>   <img src="README.assets/image-20221201084753964.png" alt="image-20221201084753964" style="zoom:50%;" />
+
+### 2 聚集函数
+
+<img src="README.assets/image-20221201084917278.png" alt="image-20221201084917278" style="zoom:50%;" />
+
+>   举例：
+>
+>   <img src="README.assets/image-20221201085049878.png" alt="image-20221201085049878" style="zoom:50%;" />
+
+## 分组查询与分组过滤
+
+>   <img src="README.assets/image-20221201085123578.png" alt="image-20221201085123578" style="zoom:50%;" />
+
+### 1 分组查询语法
+
+<img src="README.assets/image-20221201085202619.png" alt="image-20221201085202619" style="zoom:50%;" />
+
+>   举例：
+>
+>   <img src="README.assets/image-20221201085425181.png" alt="image-20221201085425181" style="zoom:50%;" />
+
+>   举例：
+>
+>   错误示范：`where`中使用聚集函数
+>
+>   <img src="README.assets/image-20221201085555456.png" alt="image-20221201085555456" style="zoom:50%;" />
+>
+>   聚集函数的操作对象是一个组，使用`where`过滤时还没有形成组
+
+### 2 分组过滤语法
+
+<img src="README.assets/image-20221201090000301.png" alt="image-20221201090000301" style="zoom:50%;" />
+
+<img src="README.assets/image-20221201090100305.png" alt="image-20221201090100305" style="zoom:67%;" />
+
+>   举例：
+>
+>   解决上面的错误示范，**`where`子句不能出现聚集计算**
+>
+>   <img src="README.assets/image-20221201090158743.png" alt="image-20221201090158743" style="zoom:50%;" />
+>
+>   <img src="README.assets/image-20221201090221808.png" alt="image-20221201090221808" style="zoom:50%;" />
+
+### 3 where与having
+
+<img src="README.assets/image-20221201090315553.png" alt="image-20221201090315553" style="zoom:50%;" />
+
+>   举例：
+>
+>   **`where`筛选对分组的影响**
+>
+>   <img src="README.assets/image-20221201090604034.png" alt="image-20221201090604034" style="zoom:50%;" />
+>
+>   ==需要用子查询解决==
+>
+>   <img src="README.assets/image-20221201090631018.png" alt="image-20221201090631018" style="zoom:50%;" />
+
+## SQL实现关系代数
+
+### 1 并交差
+
+<img src="README.assets/image-20221201090905663.png" alt="image-20221201090905663" style="zoom:67%;" />
+
+`all`的处理：
+
+<img src="README.assets/image-20221201091032511.png" alt="image-20221201091032511" style="zoom:50%;" />
+
+>   包运算，可以用重复元素
+
+>   举例：
+>
+>   `union`与`or`
+>
+>   -    <img src="README.assets/image-20221201091140496.png" alt="image-20221201091140496" style="zoom:50%;" />
+>   -    <img src="README.assets/image-20221201091228485.png" alt="image-20221201091228485" style="zoom:50%;" />
+>
+>   `intersect`与`and`
+>
+>   <img src="README.assets/image-20221201091336816.png" alt="image-20221201091336816" style="zoom:50%;" /> 
+>
+>   >   这时用`intersect`就可以简洁一些
+>
+>   `except`与`not in not exists`
+>
+>   <img src="README.assets/image-20221201091515860.png" alt="image-20221201091515860" style="zoom:50%;" />
+>
+>   <img src="README.assets/image-20221201091534323.png" alt="image-20221201091534323" style="zoom:50%;" />
+
+>   <img src="README.assets/image-20221201091614999.png" alt="image-20221201091614999" style="zoom:50%;" />
+
+### 2 空值的处理
+
+>   <img src="README.assets/image-20221201091844402.png" alt="image-20221201091844402" style="zoom:50%;" />
+>
+>   空值的问题：
+>
+>   -   如何判断是空
+>   -   如何参与计算
+
+#### 2.1 空值检测
+
+<img src="README.assets/image-20221201092000825.png" alt="image-20221201092000825" style="zoom:67%;" />
+
+>   <img src="README.assets/image-20221201092023958.png" alt="image-20221201092023958" style="zoom:50%;" />
+
+#### 2.2 空值的运算处理
+
+<img src="README.assets/image-20221201092153464.png" alt="image-20221201092153464" style="zoom:50%;" />
+
+>   <img src="README.assets/image-20221201092208364.png" alt="image-20221201092208364" style="zoom:50%;" />
+
+### 3 内外连接
+
+>   <img src="README.assets/image-20221201092341362.png" alt="image-20221201092341362" style="zoom:50%;" />
+>
+>   只使用`from`就是笛卡尔积
+>
+>   可以对`from`进行扩展
+
+<img src="README.assets/image-20221201092613392.png" alt="image-20221201092613392" style="zoom:50%;" />
+
+#### 3.1 连接的语义
+
+<img src="README.assets/image-20221201094002182.png" alt="image-20221201094002182" style="zoom:50%;" />
+
+#### 3.2 连接条件
+
+<img src="README.assets/image-20221201094503804.png" alt="image-20221201094503804" style="zoom:50%;" />
+
+-   一般
+
+-   自然
+
+    -   全部
+    -   部分
+
+    >   注意这里没有特殊说等值
+
+>   举例：
+>
+>   <img src="README.assets/image-20221201094648281.png" alt="image-20221201094648281" style="zoom:50%;" />
+>
+>   <img src="README.assets/image-20221201094711149.png" alt="image-20221201094711149" style="zoom:50%;" />
+
+## 小结1
+
+<img src="README.assets/image-20221201095334448.png" alt="image-20221201095334448" style="zoom:50%;" />
+
+### 1 SQL-SELECT完整语法
+
+<img src="README.assets/image-20221201095433263.png" alt="image-20221201095433263" style="zoom:50%;" />
+
+### 2 SQL-SELECT继续扩展
+
+<img src="README.assets/image-20221201095632382.png" alt="image-20221201095632382" style="zoom:50%;" />
+
+## 视图
+
+### 1 概念与结构
+
+<img src="README.assets/image-20221201100017368.png" alt="image-20221201100017368" style="zoom:50%;" />
+
+-   SQL中的视图：外视图+E-C映像
+-   SQL中的基本表：概念模式
+
+---
+
+<img src="README.assets/image-20221201100617502.png" alt="image-20221201100617502" style="zoom:50%;" />
+
+-   视图数据不需要重复存储，只需要存储E-C映像
+-   视图的查询没问题，至于更新操作，则要看具体情况 
+
+### 2 定义与查询
+
+<img src="README.assets/image-20221201100903552.png" alt="image-20221201100903552" style="zoom:50%;" />
+
+>   举例：
+>
+>   <img src="README.assets/image-20221201101216149.png" alt="image-20221201101216149" style="zoom:50%;" />
+
+<img src="README.assets/image-20221201101337332.png" alt="image-20221201101337332" style="zoom:67%;" />
+
+<img src="README.assets/image-20221201101836378.png" alt="image-20221201101836378" style="zoom:50%;" />
+
+>   <img src="README.assets/image-20221201101351006.png" alt="image-20221201101351006" style="zoom:50%;" />
+
+如何执行对视图的查询
+
+-   最终要转换成对基本表的查询操作，合并查询语句与视图创建语句
+
+>   在后面DBMS的实现技术中会具体介绍
+
+>   <img src="README.assets/image-20221201101954140.png" alt="image-20221201101954140" style="zoom:50%;" />
+
+### 3 更新
+
+<img src="README.assets/image-20221201102029672.png" alt="image-20221201102029672" style="zoom:67%;" />
+
+>   <img src="README.assets/image-20221201102038380.png" alt="image-20221201102038380" style="zoom:50%;" />
+
+主键限制更新：
+
+<img src="README.assets/image-20221201102234470.png" alt="image-20221201102234470" style="zoom:67%;" />
+
+>   这个例子加入主键就可以了
+
+---
+
+-   分组、聚集、算术
+-   唯一
+-   主键
+
+<img src="README.assets/image-20221201102409018.png" alt="image-20221201102409018" style="zoom:60%;" />
+
+>   <img src="README.assets/image-20221201102640450.png" alt="image-20221201102640450" style="zoom:50%;" />
+
+### 4 撤销
+
+<img src="README.assets/image-20221201102657100.png" alt="image-20221201102657100" style="zoom:67%;" />
+
+>   <img src="README.assets/image-20221201102704723.png" alt="image-20221201102704723" style="zoom:67%;" />
+
+>   <img src="README.assets/image-20221201102715355.png" alt="image-20221201102715355" style="zoom:67%;" />
+
+## 小结2
+
+<img src="README.assets/image-20221201102902989.png" alt="image-20221201102902989" style="zoom:67%;" />
+
+
+

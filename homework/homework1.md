@@ -89,7 +89,7 @@ $\Pi_{W.T\#}(\sigma_{W.U\#\ne W1.U\#}( W\underset{W.T\#=W1.T\#}\bowtie\rho_{W1}(
 
 4）检索在名称为‘A 校’和‘B 校’兼职的教职工编号，姓名和院系；
 
-$\Pi_{T\#,TNAME,DEPART}(\sigma_{UNAME='A~校'}(TE\bowtie W\bowtie UN))\cap \Pi_{T\#,TNAME,DEPART}(\sigma_{UNAME='B~校'}(TE\bowtie W\bowtie UN))$
+$\Pi_{T\#,TNAME,DEPART}(\sigma_{UNAME='A~校'}(TE\bowtie W\bowtie UN))\\\cap \Pi_{T\#,TNAME,DEPART}(\sigma_{UNAME='B~校'}(TE\bowtie W\bowtie UN))$
 
 5）检索各分校校长的编号、姓名和工资；
 
@@ -105,7 +105,7 @@ $\Pi_{T\#,TNAME}(\sigma_{TCITY\ne UCITY}(TE\bowtie W\bowtie UN))$
 
 8）检索年龄大于其所在分校校长的教职工的编号和姓名；
 
-$\Pi_{TE.T\#,TE.TNAME}(\sigma_{TE.AGE>TE1.AGE}(TE\bowtie W\bowtie UN\underset{PRI\_U\#=TE1.T\#}\bowtie \rho_{TE1}(TE)))$
+$\Pi_{TE.T\#,TE.TNAME}(\sigma_{TE.AGE>TE1.AGE}(\\TE\bowtie W\bowtie UN\underset{PRI\_U\#=TE1.T\#}\bowtie \rho_{TE1}(TE)))$
 
 9）检索不在‘A 校’工作的教职工编号和姓名；
 
