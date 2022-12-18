@@ -165,6 +165,8 @@ We need transform m:n to 1:m
 
 So the relationship itself **doesn’t need any attributes**, we may **only focus on the entities**, which may **contain relationships**
 
+>   There always are **attribute inheritances** in relationship
+
 >   Examples:
 >
 >   <img src="README.assets/image-20221218213031886.png" alt="image-20221218213031886" style="zoom:50%;" />
@@ -174,3 +176,10 @@ So the relationship itself **doesn’t need any attributes**, we may **only focu
 ### 4 Rules
 
 <img src="README.assets/image-20221218213402954.png" alt="image-20221218213402954" style="zoom:50%;" />
+
+## IDEF1x: Cases of IDEF1x Modeling
+
+### 1 Management of Parts Processing Methods
+
+https://www.icourse163.org/learn/HIT-1001554030?tid=1468247455#/learn/content?type=detail&id=1250114093&cid=1278039172&replay=true
+
