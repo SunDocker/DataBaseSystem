@@ -224,7 +224,7 @@ Expression of Cardinality
 -   All participation Relationship
 -   number
 
-#### 1.2 Examples:
+#### 1.2 Attributes, Role and Cardinalities in E-R Model
 
 <img src="README.assets/image-20221218115614539.png" alt="image-20221218115614539" style="zoom:50%;" />
 
@@ -253,6 +253,8 @@ Cardinalities:
 <img src="README.assets/image-20221218121609101.png" alt="image-20221218121609101" style="zoom:67%;" />
 
 -   It’s necessary to estimate which one fits demand better
+
+#### 1.3 
 
 ### 2 Crow’s Foot Method
 
