@@ -1,4 +1,4 @@
-# Data Modeling: Methods and Ways
+# Data Modeling: Thoughts and Ways
 
 >   <img src="README.assets/image-20221218094553642.png" alt="image-20221218094553642" style="zoom:67%;" />
 >
@@ -85,7 +85,9 @@ What’s abstraction:
 
 >   <img src="README.assets/image-20221218104128372.png" alt="image-20221218104128372" style="zoom:67%;" />
 
-### 3 The Meaning and Description of Entity / Entity and Attribute
+### 3 Entity and Attribute
+
+>   The Meaning and Description of Entity 
 
 <img src="README.assets/image-20221218104756271.png" alt="image-20221218104756271" style="zoom:50%;" />
 
@@ -124,12 +126,12 @@ Keyword:
 
 <img src="README.assets/image-20221218105855386.png" alt="image-20221218105855386" style="zoom:50%;" />
 
-### 4 Relationship and its Degree and Cardinality
+### 4 Relationship, Degree and Cardinality
 
 <img src="README.assets/image-20221218110125649.png" alt="image-20221218110125649" style="zoom:67%;" />
 
 -   Actually, it’s the relation between **instances** of entities
--   Relationship also needs **names** to be distinguished, and may also need **attributes**
+-   Relationship also needs ***names*** to be distinguished, and may also need ***attributes***
 
 ---
 
@@ -186,7 +188,7 @@ Minimum cardinality and maximum cardinality
 
 -   how to interpret the null value
 
-## Graphic Expression of E-R Model
+## Graphic Expressions of E-R Model
 
 ### 1 Chen Method
 
@@ -254,9 +256,144 @@ Cardinalities:
 
 -   It’s necessary to estimate which one fits demand better
 
-#### 1.3 
+#### 1.3 Cases of Chen Method
+
+demands:
+
+<img src="README.assets/image-20221218170212858.png" alt="image-20221218170212858" style="zoom:67%;" />
+
+1.   Comprehend demands, discover **entities**
+
+     >   which can be led by **“a” or some quantifier**
+
+2.   Describe every entity with **attributes**
+
+     <img src="README.assets/image-20221218180929661.png" alt="image-20221218180929661" style="zoom:50%;" />
+
+     >   Some “attributes” can be reflected by **relationships**
+
+3.   Confirm **keywords**
+
+     <img src="README.assets/image-20221218181001591.png" alt="image-20221218181001591" style="zoom:50%;" />
+
+4.   Analyze the **relationships** (and their **attributes**) between entities
+
+     <img src="README.assets/image-20221218181536695.png" alt="image-20221218181536695" style="zoom:50%;" />
+
+     >   It’s better not to have **isolated entities**
+
+     -   Don’t forget the **cardinalities**
+
+5.   Check whether **all the demands are covered**
+
+     <img src="README.assets/image-20221218181711352.png" alt="image-20221218181711352" style="zoom:50%;" />
+
+     How to estimate the correctness of an E-R graph with Chen Method ?
+
+     -   Content: **semantic** requirement
+     -   Form: obeying the **rules**
 
 ### 2 Crow’s Foot Method
 
+#### 2.1 Entity and Attribute
 
+<img src="README.assets/image-20221218182248674.png" alt="image-20221218182248674" style="zoom:50%;" />
 
+>   The circles in Chen Method occupy too much space
+
+#### 2.2 Relationship and Cardinality
+
+<img src="README.assets/image-20221218182537437.png" alt="image-20221218182537437" style="zoom:67%;" />
+
+>   <img src="README.assets/image-20221218182604843.png" alt="image-20221218182604843" style="zoom:50%;" />
+
+<img src="README.assets/image-20221218182557477.png" alt="image-20221218182557477" style="zoom:50%;" />
+
+>   <img src="README.assets/image-20221218182642286.png" alt="image-20221218182642286" style="zoom:50%;" />
+
+>   BUT I don’t know how to add attributes to relationship in Crow’s Foot Method
+
+#### 2.3 Examples
+
+<img src="README.assets/image-20221218182819660.png" alt="image-20221218182819660" style="zoom:50%;" /><img src="README.assets/image-20221218182845858.png" alt="image-20221218182845858" style="zoom:50%;" />
+
+Notice: <u>Express the ***business rules***</u>
+
+---
+
+<img src="README.assets/image-20221218183110259.png" alt="image-20221218183110259" style="zoom:67%;" />
+
+Partial participation and Full participation
+
+---
+
+Unary relationship and words marked
+
+<img src="README.assets/image-20221218183246006.png" alt="image-20221218183246006" style="zoom:60%;" />
+
+#### 2.4 Cases of Crow’s Foot Method
+
+<img src="README.assets/image-20221218183538188.png" alt="image-20221218183538188" style="zoom:50%;" />
+
+Still the tow aspects:
+
+-   Covering all the demands
+-   Obey the rules of Crow’s foot Method
+
+## Abstraction in Database Design
+
+### 1 Information
+
+<img src="README.assets/image-20221218184641483.png" alt="image-20221218184641483" style="zoom:67%;" />
+
+<img src="README.assets/image-20221218184657940.png" alt="image-20221218184657940" style="zoom:50%;" />
+
+-   Information and Relationship
+-   What information is necessary for us to describe
+
+### 2 Three Words
+
+<img src="README.assets/image-20221218184808275.png" alt="image-20221218184808275" style="zoom:67%;" />
+
+### 3 Type and Value
+
+<img src="README.assets/image-20221218184927603.png" alt="image-20221218184927603" style="zoom:67%;" />
+
+<img src="README.assets/image-20221218185004924.png" alt="image-20221218185004924" style="zoom:60%;" />
+
+>   <img src="README.assets/image-20221218185212983.png" alt="image-20221218185212983" style="zoom:67%;" />
+
+### 4 Levels of Abstraction
+
+<img src="README.assets/image-20221218185316796.png" alt="image-20221218185316796" style="zoom:67%;" />
+
+### 5 Data Model and Conceptual Data Model
+
+<img src="README.assets/image-20221218185701285.png" alt="image-20221218185701285" style="zoom:50%;" />
+
+-   Unitive conception and expression
+-   Union for communication and sharing
+
+<img src="README.assets/image-20221218185841813.png" alt="image-20221218185841813" style="zoom:67%;" />
+
+### 6 How to Abstraction
+
+<img src="README.assets/image-20221218190226362.png" alt="image-20221218190226362" style="zoom:50%;" />
+
+<img src="README.assets/image-20221218190515988.png" alt="image-20221218190515988" style="zoom:67%;" />
+
+### 7 Methodology
+
+<img src="README.assets/image-20221218190504819.png" alt="image-20221218190504819" style="zoom:50%;" />
+
+### 8 Levels of Modeling
+
+<img src="README.assets/image-20221218191026316.png" alt="image-20221218191026316" style="zoom:60%;" />
+
+<img src="README.assets/image-20221218191342250.png" alt="image-20221218191342250" style="zoom:50%;" />
+
+-   Abstraction: comprehend, distinguish, name, express
+-   Levels:
+    -   Methodology and methodology mpplication
+    -   Model and meta model
+-   Three worlds
