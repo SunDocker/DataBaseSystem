@@ -109,10 +109,10 @@ Classification of Attribute
 <img src="README.assets/image-20221218105140891.png" alt="image-20221218105140891" style="zoom:50%;" />
 
 -   Single attribute
--   Multiple attribute
+-   Composite attribute
 -   Value
     -   Single-valued attribute
-    -   Multiple-valued attribute
+    -   Multi-valued attribute
 -   Nullability
     -   Nullable attribute
     -   Non-null attribute
@@ -204,7 +204,7 @@ Minimum cardinality and maximum cardinality
 
         >   Composite keywords are labeled by a same number. Notice that the number is just a label, not means the amount
 
-    -   Multiple Attribute: straight line
+    -   Composite Attribute: straight line
 
 -   Relationship
 
@@ -234,7 +234,7 @@ Expression of Cardinality
 
 ---
 
-Multiple, multiple-valued, exported attribute:
+Multiple, Multi-valued, exported attribute:
 
 <img src="README.assets/image-20221218120736214.png" alt="image-20221218120736214" style="zoom:50%;" />
 

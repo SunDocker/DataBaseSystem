@@ -32,7 +32,11 @@
 <img src="README.assets/image-20221218203920916.png" alt="image-20221218203920916" style="zoom:50%;" />
 
 -   **Extending key** from another entity as **a part of primary key**
+
 -   So there is a **inclusion relation**: the **primary key of identifier-dependent entity** includes a **foreign key**, the **primary key of an identifier-independent entity**
+
+    >   **Distinguishing attribute**: identifier-dependent entity’s primary key except foreign key
+
 -   Graphic expression: rounded rectangle
 
 ### 3 Rules about Entity

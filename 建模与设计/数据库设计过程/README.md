@@ -99,3 +99,115 @@ Entity-Attribute Matrix:
 ### 5 Brief Summary
 
 <img src="README.assets/image-20221218224826424.png" alt="image-20221218224826424" style="zoom:50%;" />
+
+## Logical Database Design
+
+### 1 Overview
+
+<img src="README.assets/image-20221219095917645.png" alt="image-20221219095917645" style="zoom:50%;" />
+
+### 2 Transforming from E-R Diagram to Relation Schema
+
+#### 2.1 Tow Ports:
+
+<img src="README.assets/image-20221219100355041.png" alt="image-20221219100355041" style="zoom:50%;" />
+
+---
+
+#### 2.2 Basic Transformation:
+
+<img src="README.assets/image-20221219100542503.png" alt="image-20221219100542503" style="zoom:50%;" />
+
+---
+
+#### 2.3 Composite and Multi-valued Attribute:
+
+<img src="README.assets/image-20221219100641333.png" alt="image-20221219100641333" style="zoom:50%;" />
+
+<img src="README.assets/image-20221219101148087.png" alt="image-20221219101148087" style="zoom:50%;" />
+
+---
+
+#### 2.4 Relationship:
+
+1:1 partial or full participation
+
+<img src="README.assets/image-20221219102402919.png" alt="image-20221219102402919" style="zoom:50%;" />
+
+1:m
+
+<img src="README.assets/image-20221219102531314.png" alt="image-20221219102531314" style="zoom:50%;" />
+
+m:n
+
+<img src="README.assets/image-20221219103127809.png" alt="image-20221219103127809" style="zoom:50%;" />
+
+---
+
+#### 2.5 Identifier-dependent entities:
+
+<img src="README.assets/image-20221219103430861.png" alt="image-20221219103430861" style="zoom:50%;" />
+
+---
+
+#### 2.6 Specialize and Generalize:
+
+<img src="README.assets/image-20221219104052182.png" alt="image-20221219104052182" style="zoom:50%;" />
+
+-   Just **inherit primary key** in schema, rather than all attributes (if incomplete)
+
+Complete or Incomplete:
+
+<img src="README.assets/image-20221219104255307.png" alt="image-20221219104255307" style="zoom:50%;" />
+
+<img src="README.assets/image-20221219104447999.png" alt="image-20221219104447999" style="zoom:50%;" />
+
+---
+
+#### 2.7 Multi-Relationship:
+
+<img src="README.assets/image-20221219104947043.png" alt="image-20221219104947043" style="zoom:50%;" />
+
+-   Type 1 transformation doesn’t allow partial participation
+-   Type 2 transformation allows partial participation
+
+>   <img src="README.assets/image-20221219105329587.png" alt="image-20221219105329587" style="zoom:50%;" />
+
+#### 2.8 IDEF1x
+
+<img src="README.assets/image-20221219105500791.png" alt="image-20221219105500791" style="zoom:50%;" />
+
+### 3 Problems
+
+#### 3.1 Controlled Redundancy and Uncontrolled Redundancy:
+
+<img src="README.assets/image-20221219105838012.png" alt="image-20221219105838012" style="zoom:50%;" />
+
+<img src="README.assets/image-20221219105910562.png" alt="image-20221219105910562" style="zoom:50%;" />
+
+#### 3.2 Insert and Delete Exceptions
+
+<img src="README.assets/image-20221219110014337.png" alt="image-20221219110014337" style="zoom:50%;" />
+
+>   <img src="README.assets/image-20221219110050666.png" alt="image-20221219110050666" style="zoom:50%;" />
+
+#### 3.3 How to Avoid
+
+<img src="README.assets/image-20221219110241705.png" alt="image-20221219110241705" style="zoom:50%;" />
+
+#### 3.4 Normative Database Design
+
+<img src="README.assets/image-20221219110448353.png" alt="image-20221219110448353" style="zoom:50%;" />
+
+According to **Data Dependence**, judge the **Relationship Normal Form**, then apply the **Schema Decomposition**
+
+### 4 Brief Summary
+
+<img src="README.assets/image-20221219111301683.png" alt="image-20221219111301683" style="zoom:50%;" />
+
+## Physical database design
+
+
+
+
+
