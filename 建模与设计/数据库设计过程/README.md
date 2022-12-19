@@ -195,7 +195,7 @@ Complete or Incomplete:
 
 <img src="README.assets/image-20221219110241705.png" alt="image-20221219110241705" style="zoom:50%;" />
 
-#### 3.4 Normative Database Design
+#### 3.4 :star:Normative Database Design
 
 <img src="README.assets/image-20221219110448353.png" alt="image-20221219110448353" style="zoom:50%;" />
 
@@ -207,7 +207,21 @@ According to **Data Dependence**, judge the **Relationship Normal Form**, then a
 
 ## Physical database design
 
+### 1 Overview
 
+<img src="README.assets/image-20221219120006375.png" alt="image-20221219120006375" style="zoom:50%;" />
+
+<img src="README.assets/image-20221219120015406.png" alt="image-20221219120015406" style="zoom:50%;" />
+
+Physical database design is related to **the concrete database system**
+
+### 2 Brief Summary
+
+<img src="README.assets/image-20221219120357389.png" alt="image-20221219120357389" style="zoom:50%;" />
+
+## Summary
+
+<img src="README.assets/image-20221219132636144.png" alt="image-20221219132636144" style="zoom:50%;" />
 
 
 
