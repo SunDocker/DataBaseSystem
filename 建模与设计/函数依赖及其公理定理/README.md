@@ -52,7 +52,8 @@ In partial function dependency, there are uncontrolled redundancies
 
 <img src="README.assets/image-20221219152757390.png" alt="image-20221219152757390" style="zoom:67%;" />
 
--   **Non-trivial** function dependency
+-   There must be “real three parts” in the transitive function dependency
+-   The conditions aim to eliminate **non-trivial** function dependencies
 -   There will be uncontrolled redundancies in transitive function dependency
 
 >   Examples:
@@ -140,7 +141,13 @@ In partial function dependency, there are uncontrolled redundancies
 
 ### 4 Minimal Cover
 
+<img src="README.assets/image-20221219183331290.png" alt="image-20221219183331290" style="zoom:50%;" />
 
+-   The third entry means that no attribute in $X$ is redundant
+
+## Summary
+
+<img src="README.assets/image-20221219183921197.png" alt="image-20221219183921197" style="zoom:50%;" />
 
 
 
