@@ -25,7 +25,7 @@ Handle situation where 1NF is violated:
 
 <img src="README.assets/image-20221219204728954.png" alt="image-20221219204728954" style="zoom:67%;" />
 
--   ***Partial Function Dependency***
+-   ***Partial Function Dependency***, but notice that it is alternative attribute and candidate key
 -   Uncontrolled redundancy: attributes related with **partial dependency** causes the **other attributes** being redundant
 -   Schema decomposition
 
@@ -39,7 +39,7 @@ Handle situation where 1NF is violated:
 
 <img src="README.assets/image-20221219210108395.png" alt="image-20221219210108395" style="zoom:50%;" />
 
--   ***Transitive function dependency*** is nonexistent
+-   ***Transitive function dependency*** is nonexistent, but notice X is candidate key, A is alternative attribute
 
     >   Refer to the definition of transitive function dependency
 
@@ -90,6 +90,8 @@ Handle situation where 1NF is violated:
 
 <img src="README.assets/image-20221219222813661.png" alt="image-20221219222813661" style="zoom:50%;" />
 
+-   For those tuples which have the same X, their Y can be randomly exchanged, the result tuples also belong to the same relationship
+
 ### 2 Properties
 
 <img src="README.assets/image-20221219222832261.png" alt="image-20221219222832261" style="zoom:67%;" />
@@ -97,6 +99,29 @@ Handle situation where 1NF is violated:
 >   Example:
 >
 >   <img src="README.assets/image-20221219222847483.png" alt="image-20221219222847483" style="zoom:67%;" />
+
+### 3 Axioms and Theorems
+
+<img src="README.assets/image-20221220105723353.png" alt="image-20221220105723353" style="zoom:67%;" />
+
+-   Transitivity in multi-valued dependency is more strict
+
+<img src="README.assets/image-20221220110004373.png" alt="image-20221220110004373" style="zoom:50%;" />
+
+-   A7 and A8 indicate the relation between function dependency and multi-valued dependency
+
+>   Examples of demonstration
+>
+>   <img src="README.assets/image-20221220110508450.png" alt="image-20221220110508450" style="zoom:50%;" />
+>
+>   <img src="README.assets/image-20221220111839603.png" alt="image-20221220111839603" style="zoom:50%;" />
+>
+>   -   Notice that $X\cap Z\subseteq Z,X\cap Z\subseteq X$
+>   -   Notice that w[Y]=s[Y] and w[U-Z-Y]=s[U-Z-Y], so w[U-Z]=s[U-Z]
+>
+>   <img src="README.assets/image-20221220112231852.png" alt="image-20221220112231852" style="zoom:50%;" />
+
+<img src="README.assets/image-20221220112412217.png" alt="image-20221220112412217" style="zoom:50%;" />
 
 ## Forth Normal Form
 
@@ -110,3 +135,7 @@ Handle situation where 1NF is violated:
 ---
 
 <img src="README.assets/image-20221219224138947.png" alt="image-20221219224138947" style="zoom:50%;" />
+
+## Brief Summary
+
+<img src="README.assets/image-20221220112541761.png" alt="image-20221220112541761" style="zoom:50%;" />

@@ -100,6 +100,7 @@ In partial function dependency, there are uncontrolled redundancies
 <img src="README.assets/image-20221219155935066.png" alt="image-20221219155935066" style="zoom:50%;" />
 
 -   So when we express a relation schema later, we need to give not only **attribute set** but also **function dependency set**
+-   Notice that the argumentation rule should be XZ$\rarr$YU
 -   Notice the **usage** of Armstrong Axiom
 
 <img src="README.assets/image-20221219160507273.png" alt="image-20221219160507273" style="zoom:50%;" />
