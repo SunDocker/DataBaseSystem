@@ -67,9 +67,11 @@ Aspects to take care of:
 
 ---
 
-A simple version in **binary decomposition**:
+:star:A simple version in **binary decomposition**:
 
 <img src="README.assets/image-20221220130721590.png" alt="image-20221220130721590" style="zoom:50%;" />
+
+-   So if the two decomposed relation is **unrelated**, it must not be lossless decomposition
 
 ### 3 Properties of Lossless Decomposition
 
@@ -78,9 +80,23 @@ A simple version in **binary decomposition**:
 -   Decompose further into more subsets
 -   Decompose directly more subsets
 
+## Remaining Function Dependency Decomposition and Its Testing Algorithm
 
+### 1 Definition
 
+<img src="README.assets/image-20221221105624747.png" alt="image-20221221105624747" style="zoom:67%;" />
 
+-   Mind the definition of $\pi_{R_i}(F)$
 
+>   <img src="README.assets/image-20221221105821223.png" alt="image-20221221105821223" style="zoom:67%;" />
 
+### 2 Testing Algorithm
+
+<img src="README.assets/image-20221221110843344.png" alt="image-20221221110843344" style="zoom:67%;" />
+
+>   Example:
+>
+>   <img src="README.assets/image-20221221111045123.png" alt="image-20221221111045123" style="zoom:67%;" />
+>
+>   -   So we can easily get the conclusion with human’s eyes
 
