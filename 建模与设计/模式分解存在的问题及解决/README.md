@@ -35,7 +35,7 @@ Aspects to take care of:
 
 <img src="README.assets/image-20221220121423390.png" alt="image-20221220121423390" style="zoom:50%;" />
 
-## Lossless Decomposition and Its Testing Algorithm
+## Lossless Join Decomposition and Its Testing Algorithm
 
 ### 1 Definition
 
@@ -100,3 +100,73 @@ Aspects to take care of:
 >
 >   -   So we can easily get the conclusion with human’s eyes
 
+## Decompose Schema into 3NF or BCNF
+
+>   <img src="README.assets/image-20221222104005418.png" alt="image-20221222104005418" style="zoom:50%;" />
+>
+>   <img src="README.assets/image-20221222105047311.png" alt="image-20221222105047311" style="zoom:50%;" />
+
+### 1 Decompose Schema into BCNF with Lossless Join
+
+<img src="README.assets/image-20221222104351787.png" alt="image-20221222104351787" style="zoom:50%;" />
+
+-   <img src="README.assets/image-20221222104400321.png" alt="image-20221222104400321" style="zoom:67%;" /> 
+-   <img src="README.assets/image-20221222104408321.png" alt="image-20221222104408321" style="zoom:67%;" /> 
+
+### 2 Decompose Schema into 3NF Remaining Function Dependency
+
+<img src="README.assets/image-20221222105505139.png" alt="image-20221222105505139" style="zoom:50%;" />
+
+-   <img src="README.assets/image-20221222105527801.png" alt="image-20221222105527801" style="zoom:50%;" /> 
+
+### 3 Decompose Schema with Lossless Join and Remaining Function Dependency
+
+<img src="README.assets/image-20221222110306083.png" alt="image-20221222110306083" style="zoom:50%;" />
+
+-   So long as one schema contains the whole original candidate key 
+
+### 4 Decompose Schema into 4NF with Lossless Join
+
+<img src="README.assets/image-20221222110726579.png" alt="image-20221222110726579" style="zoom:50%;" />
+
+-   the same thought as BCNF
+
+## Join Dependency and Fifth Normal Form
+
+### 1 Join Dependency
+
+<img src="README.assets/image-20221222111405656.png" alt="image-20221222111405656" style="zoom:50%;" />
+
+Relationship between multi-valued dependency and join dependency:
+
+<img src="README.assets/image-20221222111456421.png" alt="image-20221222111456421" style="zoom:50%;" />
+
+Others:
+
+<img src="README.assets/image-20221222111508197.png" alt="image-20221222111508197" style="zoom:50%;" />
+
+### 2 5NF
+
+<img src="README.assets/image-20221222111637894.png" alt="image-20221222111637894" style="zoom:67%;" />
+
+-   Remembering its conception is just OK
+
+## Summary about Database Design
+
+<img src="README.assets/image-20221222112651153.png" alt="image-20221222112651153" style="zoom:50%;" />
+
+<img src="README.assets/image-20221222112923301.png" alt="image-20221222112923301" style="zoom:50%;" />
+
+### 1 Theories about Database Design
+
+<img src="README.assets/image-20221222112821091.png" alt="image-20221222112821091" style="zoom:50%;" />
+
+### 2 Primary Problem about Database Design
+
+<img src="README.assets/image-20221222112855305.png" alt="image-20221222112855305" style="zoom:50%;" />
+
+<img src="README.assets/image-20221222112910873.png" alt="image-20221222112910873" style="zoom:50%;" />
+
+## Brief Summary
+
+<img src="README.assets/image-20221222113010116.png" alt="image-20221222113010116" style="zoom:50%;" />
