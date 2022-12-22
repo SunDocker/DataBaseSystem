@@ -44,10 +44,10 @@ Aspects to take care of:
 ### 2 Testing Algorithm
 
 1.   Construct an $R_\rho$ Table
-2.   Modify $R_\rho$ Table according to **function dependencies**
-     -   Lines having same value about X each other
+2.   Modify $R_\rho$ Table according to **functional dependencies**
+     -   **Lines** having same value about X each other
      -   Let the decided Y of the same line also same, with $a_j$ or $b_{ij}$
-3.   Try finding a line with all $a_j$s
+3.   Try finding a line with all $a_j$
 
 <img src="README.assets/image-20221220124646034.png" alt="image-20221220124646034" style="zoom:67%;" />
 
@@ -80,7 +80,7 @@ Aspects to take care of:
 -   Decompose further into more subsets
 -   Decompose directly more subsets
 
-## Remaining Function Dependency Decomposition and Its Testing Algorithm
+## Remaining Functional Dependency Decomposition and Its Testing Algorithm
 
 ### 1 Definition
 
@@ -113,13 +113,13 @@ Aspects to take care of:
 -   <img src="README.assets/image-20221222104400321.png" alt="image-20221222104400321" style="zoom:67%;" /> 
 -   <img src="README.assets/image-20221222104408321.png" alt="image-20221222104408321" style="zoom:67%;" /> 
 
-### 2 Decompose Schema into 3NF Remaining Function Dependency
+### 2 Decompose Schema into 3NF Remaining Functional Dependency
 
 <img src="README.assets/image-20221222105505139.png" alt="image-20221222105505139" style="zoom:50%;" />
 
 -   <img src="README.assets/image-20221222105527801.png" alt="image-20221222105527801" style="zoom:50%;" /> 
 
-### 3 Decompose Schema with Lossless Join and Remaining Function Dependency
+### 3 Decompose Schema with Lossless Join and Remaining Functional Dependency
 
 <img src="README.assets/image-20221222110306083.png" alt="image-20221222110306083" style="zoom:50%;" />
 

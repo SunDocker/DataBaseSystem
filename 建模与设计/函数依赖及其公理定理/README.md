@@ -1,10 +1,10 @@
-# Function Dependency with Its Axiom and Theorem
+# Functional Dependency with Its Axiom and Theorem
 
 <img src="README.assets/image-20221219133206901.png" alt="image-20221219133206901" style="zoom:50%;" />
 
 <img src="README.assets/image-20221219133241249.png" alt="image-20221219133241249" style="zoom:67%;" />
 
-## Function Dependency
+## Functional Dependency
 
 ### 1 Definition
 
@@ -18,9 +18,9 @@ It’s important to find **data dependency sets**
 >
 >   <img src="README.assets/image-20221219134624678.png" alt="image-20221219134624678" style="zoom:50%;" />
 >
->   We need some careful analysis to get all the function dependencies
+>   We need some careful analysis to get all the functional dependencies
 
-### 2 Character of Function Dependency
+### 2 Character of functional Dependency
 
 <img src="README.assets/image-20221219135225991.png" alt="image-20221219135225991" style="zoom:67%;" />
 
@@ -30,9 +30,9 @@ It’s important to find **data dependency sets**
 >
 >   <img src="README.assets/image-20221219135327047.png" alt="image-20221219135327047" style="zoom:50%;" />
 
-There may be some constraints concerning function dependency
+There may be some constraints concerning functional dependency
 
-### 3 Full Function Dependency and Partial Function Dependency
+### 3 Full functional Dependency and Partial functional Dependency
 
 #### 3.1 Definition
 
@@ -40,27 +40,27 @@ There may be some constraints concerning function dependency
 
 <img src="README.assets/image-20221219151701683.png" alt="image-20221219151701683" style="zoom:67%;" />
 
-In partial function dependency, there are uncontrolled redundancies
+In partial functional dependency, there are uncontrolled redundancies
 
 >   Examples:
 >
 >   <img src="README.assets/image-20221219152032478.png" alt="image-20221219152032478" style="zoom:50%;" />
 
-### 4 Transitive Function Dependency
+### 4 Transitive functional Dependency
 
 <img src="README.assets/image-20221219152746517.png" alt="image-20221219152746517" style="zoom:50%;" />
 
 <img src="README.assets/image-20221219152757390.png" alt="image-20221219152757390" style="zoom:67%;" />
 
--   There must be “real three parts” in the transitive function dependency
--   The conditions aim to eliminate **non-trivial** function dependencies
--   There will be uncontrolled redundancies in transitive function dependency
+-   There must be “real three parts” in the transitive functional dependency
+-   The conditions aim to eliminate **non-trivial** functional dependencies
+-   There will be uncontrolled redundancies in transitive functional dependency
 
 >   Examples:
 >
 >   <img src="README.assets/image-20221219153221239.png" alt="image-20221219153221239" style="zoom:50%;" />
 
-## Concepts Concerning Function Dependency
+## Concepts Concerning functional Dependency
 
 ### 1 Candidate Key and Primary Key
 
@@ -95,12 +95,12 @@ In partial function dependency, there are uncontrolled redundancies
 
 ### 1 Armstrong Axiom
 
->   Deduce new function dependencies by given function dependencies
+>   Deduce new functional dependencies by given functional dependencies
 
 <img src="README.assets/image-20221219155935066.png" alt="image-20221219155935066" style="zoom:50%;" />
 
--   So when we express a relation schema later, we need to give not only **attribute set** but also **function dependency set**
--   Notice that the argumentation rule should be XZ$\rarr$YU
+-   So when we express a relation schema later, we need to give not only **attribute set** but also **functional dependency set**
+-   Notice that the argumentation rule should be XU$\rarr$YZ
 -   Notice the **usage** of Armstrong Axiom
 
 <img src="README.assets/image-20221219160507273.png" alt="image-20221219160507273" style="zoom:50%;" />
@@ -109,7 +109,7 @@ In partial function dependency, there are uncontrolled redundancies
 
 <img src="README.assets/image-20221219160749197.png" alt="image-20221219160749197" style="zoom:50%;" />
 
--   Lemma 3 indicates the relation between **single attribute function dependency** and union attributes function dependency
+-   Lemma 3 indicates the relation between **single attribute functional dependency** and union attributes functional dependency
 -   We can easily demonstrate lemma 3 with union rule and decomposition rule
 
 ### 3 Attribute Closure
@@ -130,11 +130,11 @@ In partial function dependency, there are uncontrolled redundancies
 
 >   <img src="README.assets/image-20221219171237111.png" alt="image-20221219171237111" style="zoom:50%;" />
 >
->   Notice that the **left part** of a function dependency is also **an attribute set**
+>   Notice that the **left part** of a functional dependency is also **an attribute set**
 
 >   <img src="README.assets/image-20221219171442708.png" alt="image-20221219171442708" style="zoom:50%;" />
 
-### 3 Property of Function Dependency Set
+### 3 Property of functional Dependency Set
 
 <img src="README.assets/image-20221219171845708.png" alt="image-20221219171845708" style="zoom:50%;" />
 
