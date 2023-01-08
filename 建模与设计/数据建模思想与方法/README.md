@@ -394,6 +394,6 @@ Still the tow aspects:
 
 -   Abstraction: comprehend, distinguish, name, express
 -   Levels:
-    -   Methodology and methodology mpplication
+    -   Methodology and methodology application
     -   Model and meta model
 -   Three worlds

@@ -100,6 +100,13 @@ Entity-Attribute Matrix:
 
 <img src="README.assets/image-20221218224826424.png" alt="image-20221218224826424" style="zoom:50%;" />
 
+Steps of E-R Diagram Modeling:
+
+1.   理解需求，确定实体
+2.   细化每个实体的属性
+3.   确定每个实体的关键字
+4.   分析实体之间的联系
+
 ## Logical Database Design
 
 ### 1 Overview
